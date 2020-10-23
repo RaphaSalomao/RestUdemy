@@ -6,7 +6,7 @@ import java.util.Date;
 public class ExceptionResponse implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
+	
 	private Date timestamp;
 	private String message;
 	private String details;
@@ -16,10 +16,6 @@ public class ExceptionResponse implements Serializable {
 		this.timestamp = timestamp;
 		this.message = message;
 		this.details = details;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 
 	public Date getTimestamp() {
@@ -33,6 +29,5 @@ public class ExceptionResponse implements Serializable {
 	public String getDetails() {
 		return details;
 	}
-
 	
 }
