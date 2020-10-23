@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: rapha
+Build-Jdk: 11.0.8
+Implementation-Title: RestWithSpringBoot
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: br.com.udemy
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/RestWithSpringBoot
+Created-By: Maven Integration for Eclipse
+
