@@ -10,7 +10,6 @@ deploy:
   provider: script
   script:
     docker push raphasalomao/restudemy;
-    docker push mysql:5.7;
   on: 
     branch: master
 notifications:
