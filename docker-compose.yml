@@ -20,13 +20,13 @@ services:
   restudemy:
     image: raphasalomao/restudemy
     restart: always
-    build: /Users/rapha/OneDrive/Documentos/Projetos/RestUdemy/02 RestWithSpringBoot
-    working_dir: /Users/rapha/OneDrive/Documentos/Projetos/RestUdemy/02 RestWithSpringBoot
+    build: ./02 RestWithSpringBoot
+    working_dir: /02 RestWithSpringBoot
     environment:
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production
     volumes:
-      - ./02 RestWithSpringBoot:/Users/rapha/OneDrive/Documentos/Projetos/RestUdemy/02 RestWithSpringBoot
+      - ./02 RestWithSpringBoot:/02 RestWithSpringBoot
       - ~/.m2:/root/.m2
     ports:
       - "8080:8080"
