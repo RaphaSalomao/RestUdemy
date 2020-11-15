@@ -2,17 +2,15 @@ language: bash
 services: docker
 before_install:
   - echo "We are in the Docker folder!"
-script: docker-compose build
+script:
+  - docker-compose build
 before_deploy:
   - echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
 deploy:
   provider: script
-  script: docker push raphasalomao/restudemy
+  script:
+    docker push raphasalomao/restudemy;
   on: 
     branch: master
 notifications:
-<<<<<<< HEAD:.travis.yml
   email: false
-=======
-  email: false
->>>>>>> 6f6f4ae5f36c3bb0bef186b57e8258702d1beb89:travis.yml
