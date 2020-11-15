@@ -9,7 +9,7 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker push raphasalomao/restudemy;
+    docker push raphasalomao/restudemy
   on: 
     branch: master
 notifications:
