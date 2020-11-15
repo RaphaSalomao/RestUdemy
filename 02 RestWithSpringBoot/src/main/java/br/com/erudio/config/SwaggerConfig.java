@@ -5,8 +5,6 @@ import java.util.Collections;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud.Collection;
-
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -36,7 +34,7 @@ public class SwaggerConfig {
 				"v1", 
 				"Terms of service URL", 
 				new Contact("Raphael Salomao", 
-						"localhost:8080/swegger-ui.html",
+						"localhost:8080/swagger-ui.html",
 						"rapha_raph@hotmail.com"), 
 				"License Terms",
 				"License Terms URL", Collections.EMPTY_LIST);

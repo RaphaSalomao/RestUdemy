@@ -3,6 +3,8 @@ package br.com.erudio.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import br.com.erudio.converter.DozerConverter;
@@ -45,6 +47,15 @@ public class BooksServices {
 		var entity = booksRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID"));
 		booksRepository.delete(entity);
+	}
+
+	public Page<BooksVO> selectAll(Pageable pageable) {
+		var page = booksRepository.findAll(pageable);
+		return page.map(this::convertToBooksVO);
+	}
+
+	private BooksVO convertToBooksVO(Books entity) {
+		return DozerConverter.parseObject(entity, BooksVO.class);
 	}
 
 }
